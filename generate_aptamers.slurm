@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -p GPU-shared
-#SBATCH -t 5:00:00
-#SBATCH --gpus=v100-32:8
+#SBATCH -t 6:00:00
+#SBATCH --gpus=v100-32:2
 #SBATCH --mail-user=pawojcik@andrew.cmu.edu
 #SBATCH --mail-type=BEGIN,END,FAIL
 
