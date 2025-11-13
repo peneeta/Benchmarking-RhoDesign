@@ -14,7 +14,7 @@ module load cuda/12.4.0
 conda activate RhoDesign
 
 # nav to PDB folder
-cd gen_ai_project_dir/RhoDesign/src
+cd ${HOME}/gen_ai_project_dir/RhoDesign/src
 
 # apt 1
 for i in {1..20}; do
