@@ -17,21 +17,13 @@ conda activate RhoDesign
 cd ${HOME}/gen_ai_project_dir/RhoDesign/src
 
 # apt 1
-#for i in {1..20}; do
 python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/2AU4.pdb -save ${HOME}/Benchmarking-RhoDesign/generated_seqs/2AU4 -temp 1
-#done
 
 # apt 2
-#for i in {1..20}; do
 python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/5KPY.pdb -save ${HOME}/Benchmarking-RhoDesign/generated_seqs/5KPY -temp 1
-#done
 
 # apt 3
-#for i in {1..20}; do
 python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/6E8T_mango.pdb -save ${HOME}/Benchmarking-RhoDesign/generated_seqs/6E8T -temp 1
-#done
 
 # apt 4
-#for i in {1..20}; do
 python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/8HZL.pdb -save ${HOME}/Benchmarking-RhoDesign/generated_seqs/8HZL -temp 1
-#done

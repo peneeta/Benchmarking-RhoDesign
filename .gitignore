@@ -1,1 +1,9 @@
 .DS_Store
+
+# rFAM database for Infernal
+Rfam
+Rfam/*
+
+# infernal intermediates
+infernal_output/temp
+infernal_output/temp/*
