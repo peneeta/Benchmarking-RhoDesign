@@ -1,0 +1,108 @@
+Generating 20 sequences...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:31,  1.67s/it] 10%|█         | 2/20 [00:01<00:13,  1.29it/s] 15%|█▌        | 3/20 [00:01<00:08,  2.07it/s] 20%|██        | 4/20 [00:02<00:05,  2.86it/s] 25%|██▌       | 5/20 [00:02<00:04,  3.61it/s] 30%|███       | 6/20 [00:02<00:03,  4.34it/s] 35%|███▌      | 7/20 [00:02<00:02,  4.92it/s] 40%|████      | 8/20 [00:02<00:02,  5.45it/s] 45%|████▌     | 9/20 [00:02<00:01,  5.84it/s] 50%|█████     | 10/20 [00:02<00:01,  6.15it/s] 55%|█████▌    | 11/20 [00:03<00:01,  6.35it/s] 60%|██████    | 12/20 [00:03<00:01,  6.54it/s] 65%|██████▌   | 13/20 [00:03<00:01,  6.66it/s] 70%|███████   | 14/20 [00:03<00:00,  6.71it/s] 75%|███████▌  | 15/20 [00:03<00:00,  6.76it/s] 80%|████████  | 16/20 [00:03<00:00,  6.81it/s] 85%|████████▌ | 17/20 [00:03<00:00,  6.87it/s] 90%|█████████ | 18/20 [00:04<00:00,  6.83it/s] 95%|█████████▌| 19/20 [00:04<00:00,  6.90it/s]100%|██████████| 20/20 [00:04<00:00,  6.90it/s]100%|██████████| 20/20 [00:04<00:00,  4.54it/s]
+Sequence 1/20 - Recovery rate: 0.4634
+Sequence 2/20 - Recovery rate: 0.4634
+Sequence 3/20 - Recovery rate: 0.4634
+Sequence 4/20 - Recovery rate: 0.4634
+Sequence 5/20 - Recovery rate: 0.4634
+Sequence 6/20 - Recovery rate: 0.4634
+Sequence 7/20 - Recovery rate: 0.4634
+Sequence 8/20 - Recovery rate: 0.4634
+Sequence 9/20 - Recovery rate: 0.4634
+Sequence 10/20 - Recovery rate: 0.4634
+Sequence 11/20 - Recovery rate: 0.4634
+Sequence 12/20 - Recovery rate: 0.4634
+Sequence 13/20 - Recovery rate: 0.4634
+Sequence 14/20 - Recovery rate: 0.4634
+Sequence 15/20 - Recovery rate: 0.4634
+Sequence 16/20 - Recovery rate: 0.4634
+Sequence 17/20 - Recovery rate: 0.4634
+Sequence 18/20 - Recovery rate: 0.4634
+Sequence 19/20 - Recovery rate: 0.4634
+Sequence 20/20 - Recovery rate: 0.4634
+
+Generated 20 sequences
+Average recovery rate: 0.4634
+Recovery rate std: 0.0000
+Sequences saved to: /jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs_lowtemp/2AU4/aptamers_without2d.fasta
+Generating 20 sequences...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:14,  1.34it/s] 10%|█         | 2/20 [00:00<00:08,  2.22it/s] 15%|█▌        | 3/20 [00:01<00:06,  2.79it/s] 20%|██        | 4/20 [00:01<00:05,  3.18it/s] 25%|██▌       | 5/20 [00:01<00:04,  3.45it/s] 30%|███       | 6/20 [00:01<00:03,  3.65it/s] 35%|███▌      | 7/20 [00:02<00:03,  3.78it/s] 40%|████      | 8/20 [00:02<00:03,  3.87it/s] 45%|████▌     | 9/20 [00:02<00:02,  3.93it/s] 50%|█████     | 10/20 [00:02<00:02,  4.01it/s] 55%|█████▌    | 11/20 [00:03<00:02,  4.04it/s] 60%|██████    | 12/20 [00:03<00:02,  3.72it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.80it/s] 70%|███████   | 14/20 [00:04<00:01,  3.90it/s] 75%|███████▌  | 15/20 [00:04<00:01,  3.95it/s] 80%|████████  | 16/20 [00:04<00:01,  3.97it/s] 85%|████████▌ | 17/20 [00:04<00:00,  3.99it/s] 90%|█████████ | 18/20 [00:04<00:00,  4.00it/s] 95%|█████████▌| 19/20 [00:05<00:00,  4.03it/s]100%|██████████| 20/20 [00:05<00:00,  4.05it/s]100%|██████████| 20/20 [00:05<00:00,  3.65it/s]
+Sequence 1/20 - Recovery rate: 0.7606
+Sequence 2/20 - Recovery rate: 0.7606
+Sequence 3/20 - Recovery rate: 0.7606
+Sequence 4/20 - Recovery rate: 0.7606
+Sequence 5/20 - Recovery rate: 0.7606
+Sequence 6/20 - Recovery rate: 0.7606
+Sequence 7/20 - Recovery rate: 0.7606
+Sequence 8/20 - Recovery rate: 0.7606
+Sequence 9/20 - Recovery rate: 0.7606
+Sequence 10/20 - Recovery rate: 0.7606
+Sequence 11/20 - Recovery rate: 0.7606
+Sequence 12/20 - Recovery rate: 0.7606
+Sequence 13/20 - Recovery rate: 0.7606
+Sequence 14/20 - Recovery rate: 0.7606
+Sequence 15/20 - Recovery rate: 0.7606
+Sequence 16/20 - Recovery rate: 0.7606
+Sequence 17/20 - Recovery rate: 0.7606
+Sequence 18/20 - Recovery rate: 0.7606
+Sequence 19/20 - Recovery rate: 0.7606
+Sequence 20/20 - Recovery rate: 0.7606
+
+Generated 20 sequences
+Average recovery rate: 0.7606
+Recovery rate std: 0.0000
+Sequences saved to: /jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs_lowtemp/5KPY/aptamers_without2d.fasta
+Generating 20 sequences...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:24,  1.29s/it] 10%|█         | 2/20 [00:01<00:14,  1.23it/s] 15%|█▌        | 3/20 [00:02<00:11,  1.50it/s] 20%|██        | 4/20 [00:02<00:09,  1.70it/s] 25%|██▌       | 5/20 [00:03<00:08,  1.81it/s] 30%|███       | 6/20 [00:03<00:07,  1.81it/s] 35%|███▌      | 7/20 [00:04<00:06,  1.89it/s] 40%|████      | 8/20 [00:04<00:06,  1.94it/s] 45%|████▌     | 9/20 [00:05<00:05,  1.98it/s] 50%|█████     | 10/20 [00:05<00:04,  2.01it/s] 55%|█████▌    | 11/20 [00:06<00:04,  2.02it/s] 60%|██████    | 12/20 [00:06<00:03,  2.04it/s] 65%|██████▌   | 13/20 [00:07<00:03,  2.05it/s] 70%|███████   | 14/20 [00:07<00:02,  2.05it/s] 75%|███████▌  | 15/20 [00:08<00:02,  2.06it/s] 80%|████████  | 16/20 [00:08<00:01,  2.06it/s] 85%|████████▌ | 17/20 [00:09<00:01,  2.06it/s] 90%|█████████ | 18/20 [00:09<00:00,  2.07it/s] 95%|█████████▌| 19/20 [00:10<00:00,  2.06it/s]100%|██████████| 20/20 [00:10<00:00,  2.06it/s]100%|██████████| 20/20 [00:10<00:00,  1.90it/s]
+Sequence 1/20 - Recovery rate: 0.5315
+Sequence 2/20 - Recovery rate: 0.5315
+Sequence 3/20 - Recovery rate: 0.5315
+Sequence 4/20 - Recovery rate: 0.5315
+Sequence 5/20 - Recovery rate: 0.5315
+Sequence 6/20 - Recovery rate: 0.5315
+Sequence 7/20 - Recovery rate: 0.5315
+Sequence 8/20 - Recovery rate: 0.5315
+Sequence 9/20 - Recovery rate: 0.5315
+Sequence 10/20 - Recovery rate: 0.5315
+Sequence 11/20 - Recovery rate: 0.5315
+Sequence 12/20 - Recovery rate: 0.5315
+Sequence 13/20 - Recovery rate: 0.5315
+Sequence 14/20 - Recovery rate: 0.5315
+Sequence 15/20 - Recovery rate: 0.5315
+Sequence 16/20 - Recovery rate: 0.5315
+Sequence 17/20 - Recovery rate: 0.5315
+Sequence 18/20 - Recovery rate: 0.5315
+Sequence 19/20 - Recovery rate: 0.5315
+Sequence 20/20 - Recovery rate: 0.5315
+
+Generated 20 sequences
+Average recovery rate: 0.5315
+Recovery rate std: 0.0000
+Sequences saved to: /jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs_lowtemp/6E8T/aptamers_without2d.fasta
+Generating 20 sequences...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:23,  1.26s/it] 10%|█         | 2/20 [00:01<00:15,  1.15it/s] 15%|█▌        | 3/20 [00:02<00:12,  1.37it/s] 20%|██        | 4/20 [00:02<00:10,  1.50it/s] 25%|██▌       | 5/20 [00:03<00:09,  1.52it/s] 30%|███       | 6/20 [00:04<00:08,  1.59it/s] 35%|███▌      | 7/20 [00:04<00:08,  1.62it/s] 40%|████      | 8/20 [00:05<00:07,  1.66it/s] 45%|████▌     | 9/20 [00:05<00:06,  1.70it/s] 50%|█████     | 10/20 [00:06<00:05,  1.72it/s] 55%|█████▌    | 11/20 [00:07<00:05,  1.72it/s] 60%|██████    | 12/20 [00:07<00:04,  1.73it/s] 65%|██████▌   | 13/20 [00:08<00:04,  1.74it/s] 70%|███████   | 14/20 [00:08<00:03,  1.75it/s] 75%|███████▌  | 15/20 [00:09<00:02,  1.75it/s] 80%|████████  | 16/20 [00:09<00:02,  1.76it/s] 85%|████████▌ | 17/20 [00:10<00:01,  1.70it/s] 90%|█████████ | 18/20 [00:11<00:01,  1.71it/s] 95%|█████████▌| 19/20 [00:11<00:00,  1.73it/s]100%|██████████| 20/20 [00:12<00:00,  1.74it/s]100%|██████████| 20/20 [00:12<00:00,  1.63it/s]
+Sequence 1/20 - Recovery rate: 0.6131
+Sequence 2/20 - Recovery rate: 0.6131
+Sequence 3/20 - Recovery rate: 0.6131
+Sequence 4/20 - Recovery rate: 0.6131
+Sequence 5/20 - Recovery rate: 0.6131
+Sequence 6/20 - Recovery rate: 0.6131
+Sequence 7/20 - Recovery rate: 0.6131
+Sequence 8/20 - Recovery rate: 0.6131
+Sequence 9/20 - Recovery rate: 0.6131
+Sequence 10/20 - Recovery rate: 0.6131
+Sequence 11/20 - Recovery rate: 0.6131
+Sequence 12/20 - Recovery rate: 0.6131
+Sequence 13/20 - Recovery rate: 0.6131
+Sequence 14/20 - Recovery rate: 0.6131
+Sequence 15/20 - Recovery rate: 0.6131
+Sequence 16/20 - Recovery rate: 0.6131
+Sequence 17/20 - Recovery rate: 0.6131
+Sequence 18/20 - Recovery rate: 0.6131
+Sequence 19/20 - Recovery rate: 0.6131
+Sequence 20/20 - Recovery rate: 0.6131
+
+Generated 20 sequences
+Average recovery rate: 0.6131
+Recovery rate std: 0.0000
+Sequences saved to: /jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs_lowtemp/8HZL/aptamers_without2d.fasta
