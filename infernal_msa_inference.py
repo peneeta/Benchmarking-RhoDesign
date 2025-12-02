@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Automated Infernal pipeline for generating MSAs from RNA sequences for RhoFold.
-Processes PDB directories containing FASTA files with multiple sequences.
-Generates individual .a3m MSA files for each sequence.
+Automated Infernal pipeline for generating MSAs from RNA sequences for RhoFold+
+Ended up not getting any hits with this method... Pivoted to rMSA instead
 """
 
 import subprocess

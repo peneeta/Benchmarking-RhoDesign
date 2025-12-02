@@ -7,3 +7,5 @@ Rfam/*
 # infernal intermediates
 infernal_output/temp
 infernal_output/temp/*
+infernal_output/*scan.tbl
+infernal_output/*scan.txt
