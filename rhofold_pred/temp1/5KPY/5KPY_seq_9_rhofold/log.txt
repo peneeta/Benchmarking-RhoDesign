@@ -1,0 +1,14 @@
+2025-12-03 21:01:59,190 - INFO: Constructing RhoFold
+2025-12-03 21:02:03,727 - INFO:     loading pretrained/rho_pretrained.pt
+2025-12-03 21:02:08,173 - INFO: Input_fas /app/RhoFold-main/example/input/1764794800411piipiH/5KPY_seq_9_1.fasta
+2025-12-03 21:02:08,181 - INFO: Input_a3m /app/RhoFold-main/example/input/1764794800411piipiH/5KPY_seq_9.a3m
+2025-12-03 21:02:08,181 - INFO: Started RhoFold Inference
+2025-12-03 21:02:08,204 - INFO:     Inference using device cuda
+2025-12-03 21:02:30,153 - INFO:     Export PDB file to /app/RhoFold-main/example/output/1764794800411piipiH//unrelaxed_model.pdb
+2025-12-03 21:02:30,153 - INFO: Finished RhoFold Inference in 21.972 seconds
+2025-12-03 21:02:30,153 - INFO: Started Amber Relaxation : 1000 iterations
+2025-12-03 21:02:30,153 - INFO:     AmberRelaxation: Using GPU
+2025-12-03 21:02:56,386 - INFO:     Minimizing ...
+2025-12-03 21:07:01,677 - INFO:     Energy at Minima is -153684.916 kcal/mol
+2025-12-03 21:07:01,802 - INFO:     Export PDB file to /app/RhoFold-main/example/output/1764794800411piipiH//relaxed_1000_model.pdb
+2025-12-03 21:07:01,803 - INFO: Finished Amber Relaxation : 1000 iterations in 271.650 seconds
