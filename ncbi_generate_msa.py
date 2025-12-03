@@ -600,3 +600,10 @@ if __name__ == "__main__":
 #     --output-dir msa_results \
 #     --min-identity 70 \
 #     --max-hits 100
+
+
+# /opt/homebrew/Caskroom/mambaforge/base/bin/python /Users/peneeta/Desktop/grad/courses/fall25/gen_ai_biomed/project/Benchmarking-RhoDesign/ncbi_generate_msa.py ./generated_seqs_lowtemp \
+# --email pawojcik@andrew.cmu.edu \
+#     --output-dir msa_results_lowtemp \
+#     --min-identity 70 \
+#     --max-hits 100

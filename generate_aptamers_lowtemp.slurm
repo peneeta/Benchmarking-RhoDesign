@@ -40,9 +40,3 @@ fi
 
 python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/6E8T_mango.pdb -save ${HOME}/Benchmarking-RhoDesign/generated_seqs_lowtemp/6E8T -temp 1e-5
 
-# apt 4
-if [ ! -d ${HOME}/Benchmarking-RhoDesign/generated_seqs_lowtemp/8HZL ]; then
-  mkdir -p ${HOME}/Benchmarking-RhoDesign/generated_seqs_lowtemp/8HZL;
-fi
-
-python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/8HZL.pdb -save ${HOME}/Benchmarking-RhoDesign/generated_seqs_lowtemp/8HZL -temp 1e-5
