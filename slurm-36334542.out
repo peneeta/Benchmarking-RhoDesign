@@ -1,32 +1,0 @@
-Generating 20 sequences...
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:36,  1.91s/it] 10%|█         | 2/20 [00:02<00:15,  1.15it/s] 15%|█▌        | 3/20 [00:02<00:09,  1.86it/s] 20%|██        | 4/20 [00:02<00:06,  2.62it/s] 25%|██▌       | 5/20 [00:02<00:04,  3.38it/s] 30%|███       | 6/20 [00:02<00:03,  4.10it/s] 35%|███▌      | 7/20 [00:02<00:02,  4.74it/s] 40%|████      | 8/20 [00:02<00:02,  5.29it/s] 45%|████▌     | 9/20 [00:03<00:01,  5.72it/s] 50%|█████     | 10/20 [00:03<00:01,  6.05it/s] 55%|█████▌    | 11/20 [00:03<00:01,  6.30it/s] 60%|██████    | 12/20 [00:03<00:01,  6.48it/s] 65%|██████▌   | 13/20 [00:03<00:01,  6.65it/s] 70%|███████   | 14/20 [00:03<00:00,  6.76it/s] 75%|███████▌  | 15/20 [00:03<00:00,  6.82it/s] 80%|████████  | 16/20 [00:04<00:00,  6.85it/s] 85%|████████▌ | 17/20 [00:04<00:00,  6.91it/s] 90%|█████████ | 18/20 [00:04<00:00,  6.93it/s] 95%|█████████▌| 19/20 [00:04<00:00,  6.95it/s]100%|██████████| 20/20 [00:04<00:00,  6.96it/s]100%|██████████| 20/20 [00:04<00:00,  4.32it/s]
-Traceback (most recent call last):
-  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 103, in <module>
-    eval(model,pdb,save_path,_device,temp)
-  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 70, in eval
-    with open(os.path.join(save_path, f'{name}_without2d.fasta'), 'w') as f:
-FileNotFoundError: [Errno 2] No such file or directory: '/jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs_lowtemp/2AU4/aptamers_without2d.fasta'
-Generating 20 sequences...
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:13,  1.41it/s] 10%|█         | 2/20 [00:00<00:07,  2.30it/s] 15%|█▌        | 3/20 [00:01<00:05,  2.89it/s] 20%|██        | 4/20 [00:01<00:04,  3.27it/s] 25%|██▌       | 5/20 [00:01<00:04,  3.54it/s] 30%|███       | 6/20 [00:01<00:03,  3.72it/s] 35%|███▌      | 7/20 [00:02<00:03,  3.85it/s] 40%|████      | 8/20 [00:02<00:03,  3.94it/s] 45%|████▌     | 9/20 [00:02<00:02,  4.01it/s] 50%|█████     | 10/20 [00:02<00:02,  4.06it/s] 55%|█████▌    | 11/20 [00:03<00:02,  4.11it/s] 60%|██████    | 12/20 [00:03<00:02,  3.85it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.91it/s] 70%|███████   | 14/20 [00:03<00:01,  3.97it/s] 75%|███████▌  | 15/20 [00:04<00:01,  3.98it/s] 80%|████████  | 16/20 [00:04<00:00,  4.02it/s] 85%|████████▌ | 17/20 [00:04<00:00,  4.04it/s] 90%|█████████ | 18/20 [00:04<00:00,  4.06it/s] 95%|█████████▌| 19/20 [00:05<00:00,  4.07it/s]100%|██████████| 20/20 [00:05<00:00,  4.09it/s]100%|██████████| 20/20 [00:05<00:00,  3.72it/s]
-Traceback (most recent call last):
-  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 103, in <module>
-    eval(model,pdb,save_path,_device,temp)
-  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 70, in eval
-    with open(os.path.join(save_path, f'{name}_without2d.fasta'), 'w') as f:
-FileNotFoundError: [Errno 2] No such file or directory: '/jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs_lowtemp/5KPY/aptamers_without2d.fasta'
-Generating 20 sequences...
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:19,  1.01s/it] 10%|█         | 2/20 [00:01<00:12,  1.43it/s] 15%|█▌        | 3/20 [00:01<00:10,  1.66it/s] 20%|██        | 4/20 [00:02<00:08,  1.80it/s] 25%|██▌       | 5/20 [00:02<00:07,  1.89it/s] 30%|███       | 6/20 [00:03<00:07,  1.88it/s] 35%|███▌      | 7/20 [00:03<00:06,  1.93it/s] 40%|████      | 8/20 [00:04<00:06,  1.97it/s] 45%|████▌     | 9/20 [00:04<00:05,  2.00it/s] 50%|█████     | 10/20 [00:05<00:04,  2.03it/s] 55%|█████▌    | 11/20 [00:05<00:04,  2.04it/s] 60%|██████    | 12/20 [00:06<00:03,  2.04it/s] 65%|██████▌   | 13/20 [00:06<00:03,  2.06it/s] 70%|███████   | 14/20 [00:07<00:02,  2.07it/s] 75%|███████▌  | 15/20 [00:07<00:02,  2.07it/s] 80%|████████  | 16/20 [00:08<00:01,  2.07it/s] 85%|████████▌ | 17/20 [00:08<00:01,  2.07it/s] 90%|█████████ | 18/20 [00:09<00:00,  2.07it/s] 95%|█████████▌| 19/20 [00:09<00:00,  2.07it/s]100%|██████████| 20/20 [00:10<00:00,  2.07it/s]100%|██████████| 20/20 [00:10<00:00,  1.95it/s]
-Traceback (most recent call last):
-  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 103, in <module>
-    eval(model,pdb,save_path,_device,temp)
-  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 70, in eval
-    with open(os.path.join(save_path, f'{name}_without2d.fasta'), 'w') as f:
-FileNotFoundError: [Errno 2] No such file or directory: '/jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs_lowtemp/6E8T/aptamers_without2d.fasta'
-Generating 20 sequences...
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:21,  1.11s/it] 10%|█         | 2/20 [00:01<00:14,  1.27it/s] 15%|█▌        | 3/20 [00:02<00:11,  1.46it/s] 20%|██        | 4/20 [00:02<00:10,  1.57it/s] 25%|██▌       | 5/20 [00:03<00:09,  1.59it/s] 30%|███       | 6/20 [00:03<00:08,  1.64it/s] 35%|███▌      | 7/20 [00:04<00:07,  1.69it/s] 40%|████      | 8/20 [00:05<00:06,  1.71it/s] 45%|████▌     | 9/20 [00:05<00:06,  1.74it/s] 50%|█████     | 10/20 [00:06<00:05,  1.75it/s] 55%|█████▌    | 11/20 [00:06<00:05,  1.76it/s] 60%|██████    | 12/20 [00:07<00:04,  1.77it/s] 65%|██████▌   | 13/20 [00:07<00:03,  1.77it/s] 70%|███████   | 14/20 [00:08<00:03,  1.78it/s] 75%|███████▌  | 15/20 [00:09<00:02,  1.77it/s] 80%|████████  | 16/20 [00:09<00:02,  1.78it/s] 85%|████████▌ | 17/20 [00:10<00:01,  1.74it/s] 90%|█████████ | 18/20 [00:10<00:01,  1.75it/s] 95%|█████████▌| 19/20 [00:11<00:00,  1.76it/s]100%|██████████| 20/20 [00:11<00:00,  1.76it/s]100%|██████████| 20/20 [00:11<00:00,  1.68it/s]
-Traceback (most recent call last):
-  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 103, in <module>
-    eval(model,pdb,save_path,_device,temp)
-  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 70, in eval
-    with open(os.path.join(save_path, f'{name}_without2d.fasta'), 'w') as f:
-FileNotFoundError: [Errno 2] No such file or directory: '/jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs_lowtemp/8HZL/aptamers_without2d.fasta'

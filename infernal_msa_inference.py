@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Automated Infernal pipeline for generating MSAs from RNA sequences for RhoFold+
-Ended up not getting any hits with this method... Pivoted to rMSA instead
+Ended up not getting any hits with this method... Pivoted to NCBI instead (no hits found)
 """
 
 import subprocess
