@@ -24,6 +24,3 @@ python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/5KPY.
 
 # apt 3
 python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/6E8T_mango.pdb -save ${HOME}/Benchmarking-RhoDesign/generated_seqs/6E8T -temp 1
-
-# apt 4
-python inference_without2d.py -pdb ${HOME}/Benchmarking-RhoDesign/aptamers/8HZL.pdb -save ${HOME}/Benchmarking-RhoDesign/generated_seqs/8HZL -temp 1
