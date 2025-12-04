@@ -1,0 +1,62 @@
+Generating 20 sequences...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:01<00:26,  1.42s/it] 10%|█         | 2/20 [00:01<00:12,  1.50it/s] 15%|█▌        | 3/20 [00:01<00:07,  2.34it/s] 20%|██        | 4/20 [00:01<00:05,  3.17it/s] 25%|██▌       | 5/20 [00:01<00:03,  3.95it/s] 30%|███       | 6/20 [00:02<00:03,  4.65it/s] 35%|███▌      | 7/20 [00:02<00:02,  5.22it/s] 40%|████      | 8/20 [00:02<00:02,  5.66it/s] 45%|████▌     | 9/20 [00:02<00:01,  6.02it/s] 50%|█████     | 10/20 [00:02<00:01,  6.29it/s] 55%|█████▌    | 11/20 [00:02<00:01,  6.49it/s] 60%|██████    | 12/20 [00:02<00:01,  6.63it/s] 65%|██████▌   | 13/20 [00:03<00:01,  6.73it/s] 70%|███████   | 14/20 [00:03<00:00,  6.84it/s] 75%|███████▌  | 15/20 [00:03<00:00,  6.89it/s] 80%|████████  | 16/20 [00:03<00:00,  6.93it/s] 85%|████████▌ | 17/20 [00:03<00:00,  6.93it/s] 90%|█████████ | 18/20 [00:03<00:00,  6.96it/s] 95%|█████████▌| 19/20 [00:03<00:00,  6.96it/s]100%|██████████| 20/20 [00:04<00:00,  6.97it/s]100%|██████████| 20/20 [00:04<00:00,  4.84it/s]
+Sequence 1/20 - Recovery rate: 0.5366
+Sequence 2/20 - Recovery rate: 0.5366
+Sequence 3/20 - Recovery rate: 0.5366
+Sequence 4/20 - Recovery rate: 0.5366
+Sequence 5/20 - Recovery rate: 0.5366
+Sequence 6/20 - Recovery rate: 0.5366
+Sequence 7/20 - Recovery rate: 0.5366
+Sequence 8/20 - Recovery rate: 0.5366
+Sequence 9/20 - Recovery rate: 0.5366
+Sequence 10/20 - Recovery rate: 0.5366
+Sequence 11/20 - Recovery rate: 0.5366
+Sequence 12/20 - Recovery rate: 0.5366
+Sequence 13/20 - Recovery rate: 0.5366
+Sequence 14/20 - Recovery rate: 0.5366
+Sequence 15/20 - Recovery rate: 0.5366
+Sequence 16/20 - Recovery rate: 0.5366
+Sequence 17/20 - Recovery rate: 0.5366
+Sequence 18/20 - Recovery rate: 0.5366
+Sequence 19/20 - Recovery rate: 0.5366
+Sequence 20/20 - Recovery rate: 0.5366
+
+Generated 20 sequences
+Average recovery rate: 0.4976
+Recovery rate std: 0.0741
+Sequences saved to: /jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs/2AU4/aptamers_without2d.fasta
+Generating 20 sequences...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:13,  1.43it/s] 10%|█         | 2/20 [00:00<00:07,  2.33it/s] 15%|█▌        | 3/20 [00:01<00:05,  2.93it/s] 20%|██        | 4/20 [00:01<00:04,  3.31it/s] 25%|██▌       | 5/20 [00:01<00:04,  3.58it/s] 30%|███       | 6/20 [00:01<00:03,  3.76it/s] 35%|███▌      | 7/20 [00:02<00:03,  3.90it/s] 40%|████      | 8/20 [00:02<00:03,  4.00it/s] 45%|████▌     | 9/20 [00:02<00:02,  4.04it/s] 50%|█████     | 10/20 [00:02<00:02,  4.10it/s] 55%|█████▌    | 11/20 [00:03<00:02,  4.13it/s] 60%|██████    | 12/20 [00:03<00:02,  3.86it/s] 65%|██████▌   | 13/20 [00:03<00:01,  3.94it/s] 70%|███████   | 14/20 [00:03<00:01,  4.01it/s] 75%|███████▌  | 15/20 [00:04<00:01,  4.07it/s] 80%|████████  | 16/20 [00:04<00:00,  4.11it/s] 85%|████████▌ | 17/20 [00:04<00:00,  4.13it/s] 90%|█████████ | 18/20 [00:04<00:00,  4.16it/s] 95%|█████████▌| 19/20 [00:05<00:00,  4.16it/s]100%|██████████| 20/20 [00:05<00:00,  4.17it/s]100%|██████████| 20/20 [00:05<00:00,  3.78it/s]
+Sequence 1/20 - Recovery rate: 0.6620
+Sequence 2/20 - Recovery rate: 0.6620
+Sequence 3/20 - Recovery rate: 0.6620
+Sequence 4/20 - Recovery rate: 0.6620
+Sequence 5/20 - Recovery rate: 0.6620
+Sequence 6/20 - Recovery rate: 0.6620
+Sequence 7/20 - Recovery rate: 0.6620
+Sequence 8/20 - Recovery rate: 0.6620
+Sequence 9/20 - Recovery rate: 0.6620
+Sequence 10/20 - Recovery rate: 0.6620
+Sequence 11/20 - Recovery rate: 0.6620
+Sequence 12/20 - Recovery rate: 0.6620
+Sequence 13/20 - Recovery rate: 0.6620
+Sequence 14/20 - Recovery rate: 0.6620
+Sequence 15/20 - Recovery rate: 0.6620
+Sequence 16/20 - Recovery rate: 0.6620
+Sequence 17/20 - Recovery rate: 0.6620
+Sequence 18/20 - Recovery rate: 0.6620
+Sequence 19/20 - Recovery rate: 0.6620
+Sequence 20/20 - Recovery rate: 0.6620
+
+Generated 20 sequences
+Average recovery rate: 0.7148
+Recovery rate std: 0.0413
+Sequences saved to: /jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs/5KPY/aptamers_without2d.fasta
+Generating 20 sequences...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:10,  1.74it/s] 10%|█         | 2/20 [00:00<00:05,  3.23it/s] 15%|█▌        | 3/20 [00:00<00:03,  4.46it/s] 20%|██        | 4/20 [00:00<00:02,  5.36it/s] 25%|██▌       | 5/20 [00:01<00:02,  6.10it/s] 30%|███       | 6/20 [00:01<00:02,  6.65it/s] 35%|███▌      | 7/20 [00:01<00:01,  7.06it/s] 40%|████      | 8/20 [00:01<00:01,  7.39it/s] 45%|████▌     | 9/20 [00:01<00:01,  7.61it/s] 50%|█████     | 10/20 [00:01<00:01,  7.78it/s] 55%|█████▌    | 11/20 [00:01<00:01,  7.81it/s] 60%|██████    | 12/20 [00:01<00:01,  7.90it/s] 65%|██████▌   | 13/20 [00:02<00:00,  7.99it/s] 70%|███████   | 14/20 [00:02<00:00,  7.97it/s] 75%|███████▌  | 15/20 [00:02<00:00,  8.03it/s] 80%|████████  | 16/20 [00:02<00:00,  8.01it/s] 85%|████████▌ | 17/20 [00:02<00:00,  8.02it/s] 90%|█████████ | 18/20 [00:02<00:00,  8.05it/s] 95%|█████████▌| 19/20 [00:02<00:00,  8.06it/s]100%|██████████| 20/20 [00:02<00:00,  8.11it/s]100%|██████████| 20/20 [00:02<00:00,  6.83it/s]
+Traceback (most recent call last):
+  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 103, in <module>
+    eval(model,pdb,save_path,_device,temp)
+  File "/ocean/projects/cis250160p/pwojcik/RhoDesign/src/inference_without2d.py", line 70, in eval
+    with open(os.path.join(save_path, f'{name}_without2d.fasta'), 'w') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/jet/home/pwojcik/Benchmarking-RhoDesign/generated_seqs/6E8T/aptamers_without2d.fasta'
