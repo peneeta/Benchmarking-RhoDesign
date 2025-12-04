@@ -1,68 +1,43 @@
 import numpy as np
-from Bio.PDB import PDBParser, Superimposer
+from Bio.PDB import PDBParser, Superimposer, PDBIO
 import warnings
+from pathlib import Path
 
-def GetCoords(pdb_structure, atom_type='P'):
+############################################################
+# Main functions for superimposing and RMSD/TM calculations
+# Peneeta Wojcik
+# Gen AI Biomed - Fall 2025
+############################################################
+
+def GetAtoms(pdb_structure, atom_type='C3\''):
     """
-    Extract coordinates from PDB structure for specified atom type.
-    For RNA, phosphorus (P) atoms are commonly used as they define the backbone.
+    Extract specific atoms from PDB structure.
     
     Args:
         pdb_structure: BioPython Structure object
-        atom_type: Atom name to extract (default 'P' for phosphorus backbone)
+        atom_type: Atom name to extract (default C3' for RNA backbone)
     
     Returns:
-        numpy array of coordinates (N x 3)
+        List of atom objects
     """
-    coords = []
+    atoms = []
     for model in pdb_structure:
         for chain in model:
             for residue in chain:
-                if atom_type in residue:
-                    atom = residue[atom_type]
-                    coords.append(atom.get_coord())
-    return np.array(coords)
+                atom_names = [atom_type, atom_type.replace("'", "*")]
+                for name in atom_names:
+                    if name in residue:
+                        atoms.append(residue[name])
+                        break
+    return atoms
 
-def kabsch_alignment(coords1, coords2):
+def CalculateRMSDScore(pdb1, pdb2, atom_type='C3\''):
     """
-    Perform Kabsch algorithm to find optimal rotation matrix.
-    
-    Args:
-        coords1, coords2: numpy arrays of coordinates (N x 3)
-    
-    Returns:
-        Rotation matrix and translation vectors
-    """
-    # Center the coordinates
-    centroid1 = np.mean(coords1, axis=0)
-    centroid2 = np.mean(coords2, axis=0)
-    
-    centered1 = coords1 - centroid1
-    centered2 = coords2 - centroid2
-    
-    # Compute covariance matrix
-    H = centered1.T @ centered2
-    
-    # SVD
-    U, S, Vt = np.linalg.svd(H)
-    
-    # Compute rotation matrix
-    R = Vt.T @ U.T
-    
-    # Ensure proper rotation (det(R) = 1)
-    if np.linalg.det(R) < 0:
-        Vt[-1, :] *= -1
-        R = Vt.T @ U.T
-    
-    return R, centroid1, centroid2
-
-def CalculateRMSDScore(pdb1, pdb2, atom_type='P'):
-    """
-    Calculate RMSD (Root Mean Square Deviation) between two RNA structures.
+    Calculate RMSD between two RNA structures using BioPython's Superimposer.
     
     Args:
         pdb1, pdb2: BioPython Structure objects or file paths
-        atom_type: Atom type to use for alignment (default 'P' for RNA backbone)
+        atom_type: Atom type to use (default C3' for RNA backbone)
     
     Returns:
         RMSD value in Angstroms
@@ -71,47 +46,43 @@ def CalculateRMSDScore(pdb1, pdb2, atom_type='P'):
     parser = PDBParser(QUIET=True)
     
     if isinstance(pdb1, str):
-        pdb1 = parser.get_structure('struct1', pdb1)
+        struct1 = parser.get_structure('struct1', pdb1)
+    else:
+        struct1 = pdb1
+        
     if isinstance(pdb2, str):
-        pdb2 = parser.get_structure('struct2', pdb2)
+        struct2 = parser.get_structure('struct2', pdb2)
+    else:
+        struct2 = pdb2
     
-    # Extract coordinates
-    coords1 = GetCoords(pdb1, atom_type)
-    coords2 = GetCoords(pdb2, atom_type)
+    # Extract atoms
+    atoms1 = GetAtoms(struct1, atom_type)
+    atoms2 = GetAtoms(struct2, atom_type)
     
-    # Check if structures have same number of atoms
-    if len(coords1) != len(coords2):
-        warnings.warn(f"Structures have different lengths: {len(coords1)} vs {len(coords2)}. Using minimum length.")
-        min_len = min(len(coords1), len(coords2))
-        coords1 = coords1[:min_len]
-        coords2 = coords2[:min_len]
+    if len(atoms1) == 0 or len(atoms2) == 0:
+        raise ValueError(f"No {atom_type} atoms found for alignment")
     
-    if len(coords1) == 0:
-        raise ValueError("No atoms found for alignment")
+    # Handle different lengths
+    if len(atoms1) != len(atoms2):
+        warnings.warn(f"Structures have different lengths: {len(atoms1)} vs {len(atoms2)}. Using minimum length.")
+        min_len = min(len(atoms1), len(atoms2))
+        atoms1 = atoms1[:min_len]
+        atoms2 = atoms2[:min_len]
     
-    # Perform Kabsch alignment
-    R, centroid1, centroid2 = kabsch_alignment(coords1, coords2)
+    # Use Superimposer
+    super_imposer = Superimposer()
+    super_imposer.set_atoms(atoms1, atoms2)
     
-    # Apply transformation
-    centered1 = coords1 - centroid1
-    centered2 = coords2 - centroid2
-    aligned2 = (R @ centered2.T).T
-    
-    # Calculate RMSD
-    diff = centered1 - aligned2
-    rmsd = np.sqrt(np.mean(np.sum(diff**2, axis=1)))
-    
-    return rmsd
+    return super_imposer.rms
 
-def CalculateTMScore(pdb1, pdb2, atom_type='P'):
+def CalculateTMScore(pdb1, pdb2, atom_type='C3\''):
     """
-    Calculate TM-score (Template Modeling score) between two RNA structures.
-    TM-score ranges from 0 to 1, where 1 indicates identical structures.
-    TM-score > 0.5 generally indicates similar fold.
+    Calculate TM-score between two RNA structures.
+    Uses BioPython's Superimposer for alignment.
     
     Args:
         pdb1, pdb2: BioPython Structure objects or file paths
-        atom_type: Atom type to use for alignment (default 'P' for RNA backbone)
+        atom_type: Atom type to use (default C3' for RNA backbone)
     
     Returns:
         TM-score value (0 to 1)
@@ -120,76 +91,175 @@ def CalculateTMScore(pdb1, pdb2, atom_type='P'):
     parser = PDBParser(QUIET=True)
     
     if isinstance(pdb1, str):
-        pdb1 = parser.get_structure('struct1', pdb1)
+        struct1 = parser.get_structure('struct1', pdb1)
+    else:
+        struct1 = pdb1
+        
     if isinstance(pdb2, str):
-        pdb2 = parser.get_structure('struct2', pdb2)
+        struct2 = parser.get_structure('struct2', pdb2)
+    else:
+        struct2 = pdb2
     
-    # Extract coordinates
-    coords1 = GetCoords(pdb1, atom_type)
-    coords2 = GetCoords(pdb2, atom_type)
+    # Extract atoms
+    atoms1 = GetAtoms(struct1, atom_type)
+    atoms2 = GetAtoms(struct2, atom_type)
     
-    # Check if structures have same number of atoms
-    if len(coords1) != len(coords2):
-        warnings.warn(f"Structures have different lengths: {len(coords1)} vs {len(coords2)}. Using minimum length.")
-        min_len = min(len(coords1), len(coords2))
-        coords1 = coords1[:min_len]
-        coords2 = coords2[:min_len]
+    if len(atoms1) == 0 or len(atoms2) == 0:
+        raise ValueError(f"No {atom_type} atoms found for alignment")
     
-    if len(coords1) == 0:
-        raise ValueError("No atoms found for alignment")
+    # Handle different lengths
+    if len(atoms1) != len(atoms2):
+        warnings.warn(f"Structures have different lengths: {len(atoms1)} vs {len(atoms2)}. Using minimum length.")
+        min_len = min(len(atoms1), len(atoms2))
+        atoms1 = atoms1[:min_len]
+        atoms2 = atoms2[:min_len]
     
-    # Length for normalization (typically use target length)
-    L_target = len(coords1)
+    # Use Superimposer
+    super_imposer = Superimposer()
+    super_imposer.set_atoms(atoms1, atoms2)
     
-    # Calculate d0 (distance scale)
-    # d0 = 1.24 * (L_target - 15)^(1/3) - 1.8 for L > 21
-    # This is the standard TM-score normalization
+    # Get coordinates after superposition
+    coords1 = np.array([atom.get_coord() for atom in atoms1])
+    coords2 = np.array([atom.get_coord() for atom in atoms2])
+    
+    # Apply the rotation and translation to coords2
+    super_imposer.apply(atoms2)
+    coords2_aligned = np.array([atom.get_coord() for atom in atoms2])
+    
+    # Calculate distances
+    distances = np.sqrt(np.sum((coords1 - coords2_aligned)**2, axis=1))
+    
+    # Calculate TM-score
+    L_target = len(atoms1)
     if L_target > 21:
         d0 = 1.24 * ((L_target - 15) ** (1/3)) - 1.8
     else:
-        d0 = 0.5  # For short sequences
+        d0 = 0.5
     
-    # Perform Kabsch alignment
-    R, centroid1, centroid2 = kabsch_alignment(coords1, coords2)
-    
-    # Apply transformation
-    centered1 = coords1 - centroid1
-    centered2 = coords2 - centroid2
-    aligned2 = (R @ centered2.T).T
-    
-    # Calculate distances
-    diff = centered1 - aligned2
-    distances = np.sqrt(np.sum(diff**2, axis=1))
-    
-    # Calculate TM-score
-    # TM-score = (1/L_target) * sum(1 / (1 + (di/d0)^2))
     tm_score = np.mean(1.0 / (1.0 + (distances / d0) ** 2))
     
     return tm_score
 
-
-# Example usage
-if __name__ == "__main__":
-    # Example with file paths
-    # rmsd = CalculateRMSDScore('structure1.pdb', 'structure2.pdb')
-    # tm_score = CalculateTMScore('structure1.pdb', 'structure2.pdb')
+def SaveSuperimposedStructures(pdb1, pdb2, output_prefix='aligned', atom_type='C3\''):
+    """
+    Superimpose two structures using BioPython's Superimposer and save as PDB files.
     
-    # Example with BioPython structures
+    Args:
+        pdb1, pdb2: BioPython Structure objects or file paths
+        output_prefix: Prefix for output files (default 'aligned')
+        atom_type: Atom type to use for alignment (default C3')
+    
+    Returns:
+        Dictionary with alignment info including filenames and scores
+    """
+    # Parse PDB files if paths are provided
     parser = PDBParser(QUIET=True)
-    # struct1 = parser.get_structure('s1', 'structure1.pdb')
-    # struct2 = parser.get_structure('s2', 'structure2.pdb')
-    # 
-    # rmsd = CalculateRMSDScore(struct1, struct2)
-    # tm_score = CalculateTMScore(struct1, struct2)
-    # 
-    # print(f"RMSD: {rmsd:.3f} Å")
-    # print(f"TM-score: {tm_score:.4f}")
     
-    # You can also use different atom types for alignment:
-    # rmsd_c4 = CalculateRMSDScore(struct1, struct2, atom_type="C4'")  # Sugar carbon
-    # rmsd_all = CalculateRMSDScore(struct1, struct2, atom_type='CA')  # All heavy atoms
+    if isinstance(pdb1, str):
+        struct1 = parser.get_structure('struct1', pdb1)
+    else:
+        struct1 = pdb1
+        
+    if isinstance(pdb2, str):
+        struct2 = parser.get_structure('struct2', pdb2)
+    else:
+        struct2 = pdb2
     
-    print("Functions ready to use!")
-    print("Usage:")
-    print("  rmsd = CalculateRMSDScore(pdb1, pdb2)")
-    print("  tm_score = CalculateTMScore(pdb1, pdb2)")
+    # Extract atoms for alignment
+    atoms1 = GetAtoms(struct1, atom_type)
+    atoms2 = GetAtoms(struct2, atom_type)
+    
+    # Handle different lengths
+    if len(atoms1) != len(atoms2):
+        warnings.warn(f"Structures have different lengths: {len(atoms1)} vs {len(atoms2)}. Using minimum length.")
+        min_len = min(len(atoms1), len(atoms2))
+        atoms1 = atoms1[:min_len]
+        atoms2 = atoms2[:min_len]
+    
+    # Use Superimposer
+    super_imposer = Superimposer()
+    super_imposer.set_atoms(atoms1, atoms2)
+    rmsd = super_imposer.rms
+    
+    # Apply transformation to ALL atoms in structure 2
+    # Get all atoms from structure 2
+    all_atoms2 = []
+    for model in struct2:
+        for chain in model:
+            for residue in chain:
+                for atom in residue:
+                    all_atoms2.append(atom)
+    
+    # Apply the superposition transformation
+    super_imposer.apply(all_atoms2)
+    
+    # Calculate TM-score
+    coords1 = np.array([atom.get_coord() for atom in atoms1])
+    coords2 = np.array([atom.get_coord() for atom in atoms2])
+    distances = np.sqrt(np.sum((coords1 - coords2)**2, axis=1))
+    
+    L_target = len(atoms1)
+    if L_target > 21:
+        d0 = 1.24 * ((L_target - 15) ** (1/3)) - 1.8
+    else:
+        d0 = 0.5
+    
+    tm_score = np.mean(1.0 / (1.0 + (distances / d0) ** 2))
+    
+    # Save structures
+    io = PDBIO()
+    
+    output1 = f"{output_prefix}_struct1.pdb"
+    io.set_structure(struct1)
+    io.save(output1)
+    
+    output2 = f"{output_prefix}_struct2_superimposed.pdb"
+    io.set_structure(struct2)
+    io.save(output2)
+    
+    print(f"Saved superimposed structures:")
+    print(f"  Structure 1 (reference): {output1}")
+    print(f"  Structure 2 (superimposed): {output2}")
+    print(f"\nAlignment statistics:")
+    print(f"Aligned atoms: {len(atoms1)}")
+    print(f"RMSD: {rmsd:.3f} Å")
+    print(f"TM-score: {tm_score:.4f}")
+    print("\n")
+    
+    return {
+        'file1': output1,
+        'file2': output2,
+        'rmsd': rmsd,
+        'tm_score': tm_score,
+        'aligned_atoms': len(atoms1),
+        'total_atoms': (len(GetAtoms(struct1, atom_type)), 
+                       len(GetAtoms(struct2, atom_type)))
+    }
+
+def CalculateRMSD_TM_Multiple(ref_aptamer, base_dir):
+    base_dir = Path(base_dir)
+    
+    rmsd_arr = []
+    tm_arr = []
+
+    for subdir in base_dir.iterdir():
+        if subdir.is_dir():
+            # Construct path to the PDB file
+            pdb_path = subdir / "relaxed_1000_model.pdb"
+            
+            # Calculate RMSD and TM scores
+            rmsd = CalculateRMSDScore(ref_aptamer, str(pdb_path))
+            tm = CalculateTMScore(ref_aptamer, str(pdb_path))
+            
+            # Append to arrays
+            rmsd_arr.append(rmsd)
+            tm_arr.append(tm)
+            
+            print(f"Processed {subdir.name}: RMSD={rmsd:.3f}, TM={tm:.3f}")
+                    
+
+    print(f"\nTotal processed: {len(rmsd_arr)} structures")
+    print(f"Mean RMSD: {np.mean(rmsd_arr):.3f} ± {np.std(rmsd_arr):.3f}")
+    print(f"Mean TM-score: {np.mean(tm_arr):.3f} ± {np.std(tm_arr):.3f}")
+    
+    return rmsd_arr, tm_arr
