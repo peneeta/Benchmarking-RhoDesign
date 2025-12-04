@@ -3,42 +3,18 @@ NCBI BLAST + MAFFT MSA GENERATION SUMMARY
 ================================================================================
 
 
-PDB ID: 2AU4
-----------------------------------------------------------------------
-  Sequence 0: generated_2AU4
-    Status: success
-    MSA size: 101 sequences
-    Output: msa_results_lowtemp/2AU4/2AU4_seq_0.a3m
-
-
-PDB ID: 5KPY
-----------------------------------------------------------------------
-  Sequence 0: generated_5KPY
-    Status: success
-    MSA size: 2 sequences
-    Output: msa_results_lowtemp/5KPY/5KPY_seq_0.a3m
-
-
 PDB ID: 6E8T
 ----------------------------------------------------------------------
   Sequence 0: generated_6E8T
     Status: success
-    MSA size: 3 sequences
+    MSA size: 12 sequences
     Output: msa_results_lowtemp/6E8T/6E8T_seq_0.a3m
-
-
-PDB ID: 8HZL
-----------------------------------------------------------------------
-  Sequence 0: generated_8HZL
-    Status: success
-    MSA size: 6 sequences
-    Output: msa_results_lowtemp/8HZL/8HZL_seq_0.a3m
 
 
 ================================================================================
 TOTAL RESULTS:
-  Sequences processed: 4
-  Sequences with hits: 4
-  Total MSA sequences: 112
-  Average MSA size: 28.0 sequences
+  Sequences processed: 1
+  Sequences with hits: 1
+  Total MSA sequences: 12
+  Average MSA size: 12.0 sequences
 ================================================================================

@@ -1,12 +1,6 @@
 >aptamers_without2d_seq8
-GCGCGGGGGAGGAUCGGGGUAUAGAAUGCCUGCGUGCACGGAAGAGAGUCUGAUAUAUGAUACGCCCGUGCGCGCGGGGGGGGAUCCAGCGUGCAGCGAGCCCACGCACGCGGAGAGGGGUCCAGUGUGCGACGCGCCUGUGG
->gi|2022316258|gb|CP072520.1|
------------------------------------------------------------------------------------ATCCAGCGTGCGGCGAGCGCACGCACGCG-------------------------------
->gi|1061600331|gb|CP013398.1|
------------------------------------------------------------------------------------ATCCAGCGTGCGGCGAGCGCACGCACGCG-------------------------------
->gi|2874253780|emb|OY969764.1|
---------------------------------------------------------------CCCTCGCCCGCGGTCGGC---GTCCAGTGTGCGACGCGCCTGT--------------------------------------
->gi|2909956440|dbj|AP039571.1|
-----------------------------------------------------------------CCCGTGCGCGCGGGGG---GCGGTGCGTGCAGCGGGCCCGCGGAC----------------------------------
->gi|2771745541|gb|CP142886.1|
------------------------------------------------------------------------------------ATCCAGCGTGCGGCGAGCGCACGCACGCG-------------------------------
+GCGCGAGAAAGGAUCGGGAUAUGGGAUGCUCACGC
+>gi|2734898850|gb|CP155755.1|
+GCGCTAGAAAGGATCGGGACATGGGGCATGCTCA-
+>gi|2621784582|emb|OY781040.1|
+----GAGAAAGGATCGGGATATGGGA---------
